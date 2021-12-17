@@ -2,12 +2,12 @@ def containerName="docker-pipeline"
 def tag="latest"
 def dockerHubUser="prashantshende17"
 def httpPort="8090"
-tools {
-maven : 'maven'
-}
+
 
 node {
-
+    tools {
+    maven : 'maven'
+    }
     stage('Checkout') {
         checkout scm
     }
